@@ -1,0 +1,24 @@
+body {
+    background: linear-gradient(to bottom right, #ff66b2, #ff3366);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hello-container {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Additional styles for responsiveness */
+  iframe {
+    max-width: 100%;
+    width: 100%;
+    
+  }
+  
