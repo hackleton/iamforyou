@@ -13,9 +13,20 @@
     <div class="row">
       <div class="col-md-12">
         <div class="hello-container">
+
+          <div class="popup-container" id="popup">
+            <div class="popup-header">
+              <span class="close-btn" onclick="closePopup()">X</span>
+            </div>
+            <div class="popup-content">
+            <h5>- You're entirely anonymous let me help you. </h5>
+            <h5>- Completely free access because I care for you.</h5>
+         <br>
+            <p>"I'll be there for you. Don't worry; this shall pass, and better things are on your way &#9829;"</p>
+          </div>
+          </div>
+
           <h1>
-            
-    
             <iframe
             data-chat-frame="11ee8697-d40e-d6b0-b651-1d5aa07fe99a"
             width="550"
@@ -31,6 +42,9 @@
         </div>
       </div>
     </div>
+    <div class="fixed-footer">
+      Made by your brother&#9829; 
+    </div>
   </div>
 
   <!-- Bootstrap JS and dependencies (optional) -->
@@ -38,5 +52,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <!-- Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+     function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+      document.body.classList.remove('blur-background'); // Remove background blur
+      document.body.style.overflow = 'auto'; // Allow scrolling
+    }
+
+    // Execute closePopup() function when clicking outside the popup
+    document.addEventListener('click', function(event) {
+      if (event.target === document.getElementById('popup')) {
+        closePopup();
+      }
+    });
+
+    // Execute openPopup() function when the document is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      openPopup();
+    });
+  </script>
 </body>
 </html>
