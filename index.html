@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,6 +17,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
   <div class="container">
     <div class="row">
@@ -27,31 +29,34 @@
               <span class="close-btn" onclick="closePopup()">X</span>
             </div>
             <div class="popup-content">
-            <h5>- You're entirely anonymous let me help you. </h5>
-            <h5>- Completely free access because I care for you.</h5>
-         <br>
-            <p>"I'll be there for you. Don't worry; this shall pass, and better things are on your way &#9829;"</p>
-          </div>
+              <div class="lottiepapa">
+                <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                  type="module"></script><dotlottie-player
+                  src="https://lottie.host/65b55bde-6190-4961-a47c-afef1b1855bb/bUzdcBLvoC.json"
+                  background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal"
+                  autoplay hover></dotlottie-player>
+              </div>
+              <div class="notes">
+                <h5>- Free access for you.</h5>
+                <h5>- It's our secret because we are friends. </h5>
+                <br>
+                <p><span>I'll be there for you. Don't worry; this shall pass, and better things are on your way &#9829;</span></p>
+              </div>
+            </div>
           </div>
 
           <h1>
-            <iframe
-            data-chat-frame="11ee8697-d40e-d6b0-b651-1d5aa07fe99a"
-            width="550"
-            height="725"
-            style="border:0;background:rgb(241, 249, 244);"
-          ></iframe>
-          <script
-            src="https://retune.so/api/script/chat.js?iframe&id=11ee8697-d40e-d6b0-b651-1d5aa07fe99a"
-            defer
-          ></script>
-          
+            <iframe data-chat-frame="11ee8697-d40e-d6b0-b651-1d5aa07fe99a" width="550" height="725"
+              style="border:0;background:rgb(241, 249, 244);"></iframe>
+            <script src="https://retune.so/api/script/chat.js?iframe&id=11ee8697-d40e-d6b0-b651-1d5aa07fe99a"
+              defer></script>
+
           </h1>
         </div>
       </div>
     </div>
     <div class="fixed-footer">
-      Made by your brother&#9829; 
+      Made by your brother&#9829;
     </div>
   </div>
 
@@ -61,23 +66,24 @@
   <!-- Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
-     function closePopup() {
+    function closePopup() {
       document.getElementById('popup').style.display = 'none';
       document.body.classList.remove('blur-background'); // Remove background blur
       document.body.style.overflow = 'auto'; // Allow scrolling
     }
 
     // Execute closePopup() function when clicking outside the popup
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
       if (event.target === document.getElementById('popup')) {
         closePopup();
       }
     });
 
     // Execute openPopup() function when the document is ready
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       openPopup();
     });
   </script>
 </body>
+
 </html>
